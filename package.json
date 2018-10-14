@@ -1,0 +1,29 @@
+{
+  "name": "cestou_zimy",
+  "author": "Andrzej",
+  "private": true,
+  "version": "0.0.1",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "foundation-sites": "6.4.*",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "latest",
+    "gulp-css-globbing": "^0.2.2",
+    "gulp-clean-css": "latest",
+    "gulp-plumber": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-svgstore": "^6.0.0",
+    "gulp-twig": "^1.1.1",
+    "gulp-uglify": "latest",
+    "gulp-watch": "latest",
+    "path": "^0.12.7",
+    "motion-ui": "latest"
+  },
+  "dependencies": {
+    "browser-sync": "^2.5.2"
+  }
+}
