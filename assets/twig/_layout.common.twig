@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-{% include '_gtm_HEAD.twig' %}
+{# {% include '_gtm_HEAD.twig' %} #}
 
         <title>{{ block('title') }} | </title>
         <meta name="description" content="">
@@ -19,25 +19,26 @@
         <link rel="stylesheet" href="dist/css/main.css?v=20171129">
         {# <script src="js/vendor/modernizr-2.8.3.min.js"></script> #}
         {# <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet"> #}
+        <link href="http://fonts.googleapis.com/css?family=Titillium+Web:600|Open+Sans&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-{% include '_gtm_BODY.twig' %}
+{# {% include '_gtm_BODY.twig' %} #}
 
-        <header class="site-header js-site-header menuopen">
+        <header class="site-header js-site-header">
             <div class="grid-container">
                 <div class="grid-x">
                     <button class="site-header__menutoggle js-menutoggle"></button>
-                    <div class="cell small-12 medium-2 large-3"><h1 class="site-header__title">Site title</h1></div>
+                    <div class="cell small-12 medium-2 large-3"><h1 class="site-header__title">Cestou Zimy</h1></div>
                     <div class="cell medium-10 large-9 site-header__navigation">
                         <nav class="site-navigation">
                             <ul class="site-menu">
-                                <li class="site-menu__item"><a href="/" class="site-menu__href">Úvod</a></li>
-                                <li class="site-menu__item"><a href="ako.html" class="site-menu__href">Ako?</a></li>
-                                <li class="site-menu__item"><a href="faq.html" class="site-menu__href">Časté otázky</a></li>
-                                <li class="site-menu__item"><a href="media.html" class="site-menu__href">Médiá</a></li>
+                                <li class="site-menu__item"><a href="#top" class="site-menu__href">Úvod</a></li>
+                                <li class="site-menu__item"><a href="#okurze" class="site-menu__href">O kurze</a></li>
+                                <li class="site-menu__item"><a href="#tim" class="site-menu__href">Tím</a></li>
+                                <li class="site-menu__item"><a href="#prihlaska" class="site-menu__href">Prihlásenie</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -48,7 +49,10 @@
         {% block page %}{% endblock %}
 
         <script src="dist/js/jquery.min.js"></script>
+        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
         <script src="dist/js/main.js"></script>
+
 
         <script>
             //$(document).foundation();

@@ -1,0 +1,43 @@
+.coursegallery {
+	@include xy-grid;
+
+	&__gallery {
+		@include xy-cell;
+		// @incli
+	}
+
+	&__bearpart {
+		@include xy-cell;
+		display: flex;
+	    flex-flow: column wrap;
+	    justify-content: flex-end;
+	    align-items: center;
+
+		@include breakpoint( medium ) {
+			@include xy-cell(3);
+		}
+	}
+
+	.grid-sizer,
+	.gallery__item {
+		width: 50%;
+
+		@include breakpoint( medium ) {
+			width: 33%;
+		}
+
+		@include breakpoint( large ) {
+			width: 20%;
+		}
+	}
+
+	.gallery__item {
+		opacity: 1;
+		transition: .5s ease;
+
+		&:hover {
+			opacity: 0.75;
+		}
+
+	}
+}

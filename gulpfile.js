@@ -42,7 +42,7 @@ var paths = {
         'assets/js/main.js'
         ],
         copyScripts: [
-        // 'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/jquery/dist/jquery.min.js',
         // 'node_modules/svg4everybody/dist/svg4everybody.min.js'
         ],
         images: ['assets/svg/*.svg'],

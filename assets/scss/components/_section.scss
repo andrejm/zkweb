@@ -1,0 +1,20 @@
+.section {
+	margin-bottom: rem-calc( 2*25.6 );
+	max-width: 100%;
+
+	&.intro {
+		padding-top: 60px;
+		margin-bottom: 0;
+	}
+
+	&__intro {
+		font-size: 1.5rem;
+		text-align: center;
+		font-weight: bold;
+
+		@include breakpoint( medium ) {
+			width: 75%;
+			margin: 0 auto 32px;
+		}
+	}
+}
