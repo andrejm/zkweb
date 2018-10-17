@@ -9,9 +9,9 @@
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "latest",
     "gulp-concat": "latest",
     "gulp-css-globbing": "^0.2.2",
-    "gulp-clean-css": "latest",
     "gulp-plumber": "latest",
     "gulp-sass": "latest",
     "gulp-sourcemaps": "latest",
@@ -20,8 +20,11 @@
     "gulp-twig": "^1.1.1",
     "gulp-uglify": "latest",
     "gulp-watch": "latest",
-    "path": "^0.12.7",
-    "motion-ui": "latest"
+    "imagesloaded": "^4.1.4",
+    "magnific-popup": "^1.1.0",
+    "masonry-layout": "^4.2.2",
+    "motion-ui": "latest",
+    "path": "^0.12.7"
   },
   "dependencies": {
     "browser-sync": "^2.5.2"

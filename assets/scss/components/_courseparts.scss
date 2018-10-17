@@ -7,8 +7,8 @@
 
 		@include breakpoint( medium ) {
 			@include xy-cell( 4 );
-			@include xy-gutters( $gutter-type: padding );
-			@include xy-gutters(0, margin);
+			// @include xy-gutters( $gutter-type: padding );
+			// @include xy-gutters(0, margin);
 			&:first-child {
 			}
 			// @include xy-gutters(0, margin, right);

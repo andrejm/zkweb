@@ -17,4 +17,8 @@
 			margin: 0 auto 32px;
 		}
 	}
+
+	&__title {
+		margin-bottom: rem-calc( 16*$global-lineheight );
+	}
 }

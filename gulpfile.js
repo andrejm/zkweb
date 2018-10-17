@@ -27,9 +27,9 @@ var paths = {
         // TODO temporarily loading from dist folder, find out how to load original files
         // https://foundation.zurb.com/forum/posts/53440-foundation-custom-gulp---uncaught-referenceerror-exports-is-not-defined
 
-        'node_modules/foundation-sites/dist/js/foundation.core.js', //must be loaded
-        'node_modules/foundation-sites/dist/js/foundation.util.mediaQuery.js', //must be loaded
-        'node_modules/foundation-sites/dist/js/foundation.smoothScroll.js',
+        // 'node_modules/foundation-sites/dist/js/foundation.core.js', //must be loaded
+        // 'node_modules/foundation-sites/dist/js/foundation.util.mediaQuery.js', //must be loaded
+        // 'node_modules/foundation-sites/dist/js/foundation.smoothScroll.js',
         // 'node_modules/foundation-sites/js/foundation.util.keyboard.js',
         // 'node_modules/foundation-sites/js/foundation.util.motion.js',
         // 'node_modules/foundation-sites/js/foundation.util.timerAndImageLoader.js',
@@ -38,11 +38,14 @@ var paths = {
         // 'node_modules/foundation-sites/js/foundation.responsiveMenu.js',
         // 'node_modules/foundation-sites/js/foundation.responsiveToggle.js',
         // 'node_modules/foundation-sites/js/foundation.orbit.js',
+        'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+        'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
+        'node_modules/imagesloaded/imagesloaded.pkgd.min.js',
         'assets/js/components/*.js',
         'assets/js/main.js'
         ],
         copyScripts: [
-        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/jquery/dist/jquery.min.js'
         // 'node_modules/svg4everybody/dist/svg4everybody.min.js'
         ],
         images: ['assets/svg/*.svg'],
