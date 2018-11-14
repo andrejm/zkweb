@@ -1,0 +1,25 @@
+//Colors
+
+//Other variables
+
+//Other
+
+a:not(.button) {
+	text-decoration: underline;
+}
+
+a:not(.button):hover {
+	text-decoration: none;
+}
+
+body {
+	max-width: 100%;
+}
+
+p.no-margin {
+	margin: 0;
+}
+
+// * {
+//     border: 1px solid red;
+// }

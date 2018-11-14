@@ -1,0 +1,11 @@
+.profiles {
+	// @include xy-grid;
+
+	&__profile {
+		// @include xy-cell;
+
+		@include breakpoint( medium ) {
+			// @include xy-cell( 4 );
+		}
+	}
+}

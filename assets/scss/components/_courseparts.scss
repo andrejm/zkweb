@@ -1,0 +1,23 @@
+.courseparts {
+	@include xy-grid;
+	// @include xy-grid-collapse('.courseparts__part');
+
+	&__part {
+		@include xy-cell;
+
+		@include breakpoint( medium ) {
+			@include xy-cell( 4 );
+			// @include xy-gutters( $gutter-type: padding );
+			// @include xy-gutters(0, margin);
+			&:first-child {
+			}
+			// @include xy-gutters(0, margin, right);
+			// @include xy-gutters(60px, margin, left);
+			// @include xy-gutters(120px, padding, right);
+			// @include xy-gutters(0, padding, left, false);
+			// @include xy-gutters(30px, padding, right, false);
+			// padding-right: 20px;
+		}
+	}
+
+}

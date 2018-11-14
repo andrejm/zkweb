@@ -1,0 +1,64 @@
+.profile {
+
+	display: flex;
+	flex-flow: column nowrap;
+
+	@include breakpoint( medium ) {
+		flex-flow: row nowrap;
+	}
+
+	&__imgpart--kubo {
+		background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/kubo.jpg") top;
+	}
+
+	&__imgpart--lula {
+		background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/lula.jpg") top;
+	}
+
+	&__imgpart--arny {
+		background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/arny.jpg") top;
+	}
+
+	&__imgpart--zuzka {
+		background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/zuzka.jpg") top;
+	}
+
+	&__imgpart--fresh {
+		background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/fresh.jpg") top;
+	}
+
+	&__imgpart--kika {
+		background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/kika.jpg") top;
+	}
+
+	&__imgpart--ada {
+		background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/ada.jpg") top;
+	}
+
+	&__imgpart--peto {
+		background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/peto.jpg") top;
+	}
+
+	&__imgpart--riso {
+		background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/riso.jpg") top;
+	}
+
+	&__imgpart {
+		flex: 0 0 100px;
+		background-size: contain;
+	}
+
+	&__textpart {
+		@include breakpoint( medium ) {
+			padding-left: rem-calc(20);
+		}
+	}
+
+	&__name {
+		display: none;
+
+		@include breakpoint( medium ) {
+			display: block;
+		}
+	}
+}

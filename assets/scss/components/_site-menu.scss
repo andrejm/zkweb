@@ -1,0 +1,33 @@
+.site-menu {
+	@include reset-list();
+
+	&__href {
+		width: 100%;
+		text-align: center;
+		display: inline-block;
+		padding: rem-calc( 15 );
+		border-top: 1px solid $primary-color;
+	}
+
+	@include breakpoint( medium ) {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+
+		&__item {
+			margin-left: rem-calc( 30 );
+		}
+
+		&__href {
+			border: 0;
+			line-height: rem-calc( 60 );
+			padding: 0;
+			color: $white;
+
+			&:hover {
+				color: $white;
+				text-decoration: underline;
+			}
+		}
+	}
+}
