@@ -68,13 +68,26 @@
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
+<<<<<<< HEAD
 $foundation-palette: (
   primary: #1779ba,
+=======
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+$black: #0a0a0a;
+$white: #fefefe;
+$snow-white: #ededed;
+$zk-blue: #588D8C;
+$foundation-palette: (
+  primary: $zk-blue,
+>>>>>>> bca8c963eb6750b3fe91a7e0b0f197b0585ab4af
   secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
 );
+<<<<<<< HEAD
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
@@ -83,11 +96,20 @@ $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+=======
+$body-background: $snow-white;
+$body-font-color: $zk-blue;
+$body-font-family: 'PT Sans', 'Open Sans', Roboto, Arial, sans-serif;
+>>>>>>> bca8c963eb6750b3fe91a7e0b0f197b0585ab4af
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
+<<<<<<< HEAD
+=======
+$global-weight-semi-bold: 600;
+>>>>>>> bca8c963eb6750b3fe91a7e0b0f197b0585ab4af
 $global-weight-bold: bold;
 $global-radius: 0;
 $global-menu-padding: 0.7rem 1rem;
@@ -130,8 +152,13 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
+<<<<<<< HEAD
 $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-normal;
+=======
+$header-font-family: 'Titillium Web', Verdana, sans-serif;
+$header-font-weight: $global-weight-semi-bold;
+>>>>>>> bca8c963eb6750b3fe91a7e0b0f197b0585ab4af
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;

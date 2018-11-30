@@ -5,8 +5,13 @@
   "version": "0.0.1",
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
+<<<<<<< HEAD
     "foundation-sites": "^6.4.3",
     "gulp": "^3.9.1",
+=======
+    "foundation-sites": "6.4.*",
+    "gulp": "latest",
+>>>>>>> bca8c963eb6750b3fe91a7e0b0f197b0585ab4af
     "gulp-autoprefixer": "latest",
     "gulp-babel": "^6.1.2",
     "gulp-clean-css": "latest",
