@@ -76,7 +76,7 @@ var paths = {
     };
 
 // Compile Sass
-gulp.task('sass', function() {
+gulp.task('sass', gulp.series(function(done) {
     gulp.src(paths.scss)
     .pipe(plumber())
         // .pipe(sourcemaps.init()) // Initialize sourcemap plugin
@@ -104,7 +104,8 @@ gulp.task('sass', function() {
         // .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.dest + 'css'))
         .pipe(browserSync.stream());
-    });
+        done();
+    }));
 
 // Compile Twig templates
 gulp.task('twig', function () {
@@ -127,7 +128,7 @@ gulp.task('uglify', function() {
 
 // Concat
 // TODO concat normalize.css from bower components with our stylesheet
-gulp.task('concat', function() {
+gulp.task('concat', gulp.series(function(done) {
   gulp.src( paths.scripts )
   .pipe(plumber())
     .pipe(babel({
@@ -139,7 +140,8 @@ gulp.task('concat', function() {
     // }))
     .pipe(gulp.dest(paths.dest + 'js'))
     .pipe(browserSync.stream());
-});
+    done();
+}));
 
 // //SVGs
 gulp.task('svgstore', function () {
@@ -160,20 +162,23 @@ gulp.task('svgstore', function () {
     .pipe(gulp.dest(paths.dest + '/svg/'));
 });
 
-gulp.task('copyfonts', function() {
+gulp.task('copyfonts', gulp.series(function(done) {
  gulp.src(paths.fonts)
  .pipe(gulp.dest(paths.dest + '/fonts'));
-});
+ done();
+}));
 
-gulp.task('copyImages', function() {
+gulp.task('copyImages', gulp.series(function(done) {
  gulp.src(paths.copyImages)
  .pipe(gulp.dest(paths.dest + '/images'));
-});
+ done();
+}));
 
-gulp.task('copyScripts', function() {
+gulp.task('copyScripts', gulp.series(function(done) {
  gulp.src(paths.copyScripts)
  .pipe(gulp.dest(paths.dest + '/js'));
-});
+ done();
+}));
 
 gulp.task('serve', function() {
 
@@ -184,10 +189,19 @@ gulp.task('serve', function() {
         }
     });
 
-    gulp.watch(paths.twigWatch, ['twig']);
-    gulp.watch(paths.scssWatch, ['sass']);
-    gulp.watch(paths.scripts, ['concat']);
+    gulp.watch(paths.twigWatch, gulp.series('twig'));
+    gulp.watch(paths.scssWatch, gulp.series('sass'));
+    gulp.watch(paths.scripts, gulp.series('concat'));
     // gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
-gulp.task('default', [ 'copyfonts', 'copyScripts', 'copyImages', 'svgstore', 'sass', 'twig', 'concat', 'serve' ]);
+gulp.task( 'default', gulp.series( 
+    'copyfonts', 
+    'copyScripts', 
+    'copyImages', 
+    'svgstore', 
+    'sass', 
+    'twig', 
+    'concat', 
+    'serve' 
+    ));
