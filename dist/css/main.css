@@ -8309,20 +8309,8 @@ p.no-margin {
   }
 }
 
-.profile__imgpart--kubo {
-  background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/kubo.jpg") top;
-}
-
-.profile__imgpart--lula {
-  background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/lula.jpg") top;
-}
-
 .profile__imgpart--arny {
   background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/arny.jpg") top;
-}
-
-.profile__imgpart--zuzka {
-  background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/zuzka.jpg") top;
 }
 
 .profile__imgpart--fresh {
@@ -8333,16 +8321,20 @@ p.no-margin {
   background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/kika.jpg") top;
 }
 
-.profile__imgpart--ada {
-  background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/ada.jpg") top;
-}
-
 .profile__imgpart--peto {
   background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/peto.jpg") top;
 }
 
 .profile__imgpart--riso {
   background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/riso.jpg") top;
+}
+
+.profile__imgpart--buchta {
+  background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/buchta.jpg") top;
+}
+
+.profile__imgpart--miro {
+  background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/miro.jpg") top;
 }
 
 .profile__imgpart {
