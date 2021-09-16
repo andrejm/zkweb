@@ -175,7 +175,7 @@ gulp.task('copyImages', gulp.series(function(done) {
 }));
 
 gulp.task('copyScripts', gulp.series(function(done) {
- gulp.src(paths.copyScripts)
+ gulp.src(paths.copyScripts, { allowEmpty: true })
  .pipe(gulp.dest(paths.dest + '/js'));
  done();
 }));
