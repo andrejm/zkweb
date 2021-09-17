@@ -20,7 +20,7 @@ var twigMarkdown = require('twig-markdown');
 
 // Paths
 var paths = {
-scripts: [
+  scripts: [
     'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
     'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
     'node_modules/imagesloaded/imagesloaded.pkgd.min.js',
@@ -30,10 +30,9 @@ scripts: [
   copyScripts: [
     'node_modules/jquery/dist/jquery.min.js'
   ],
-  images: ['assets/svg/*.svg'],
-  copyImages: ['assets/images/**/*.{png,jpg,jpeg,svg,gif}'],
-  copyFiles: ['files/**/*.*'],
-  fonts: ['assets/fonts/*.{ttf,woff,woff2,eot,svg}'],
+  images: 'assets/images/**/*.{png,jpg,jpeg,svg,gif}',
+  files: 'assets/files/**/*',
+  favicon: 'assets/favicon.ico',
   scss: ['assets/scss/main.scss'],
   scssWatch: ['assets/scss/**/*.scss'],
   scssPaths: [
@@ -106,42 +105,15 @@ gulp.task('concat', gulp.series(function(done) {
     done();
 }));
 
-// //SVGs
-gulp.task('svgstore', function () {
-  return gulp
-  .src(paths.images)
-  .pipe(svgmin(function (file) {
-    var prefix = path.basename(file.relative, path.extname(file.relative));
-    return {
-      plugins: [{
-        cleanupIDs: {
-          prefix: prefix + '-',
-          minify: true
-        }
-      }]
-    };
-  }))
-  .pipe(svgstore())
-  .pipe(gulp.dest(paths.dest + '/svg/'));
-});
-
-gulp.task('copyfonts', gulp.series(function(done) {
-  gulp.src(paths.fonts)
-   .pipe(gulp.dest(paths.dest + '/fonts'));
-    done();
+gulp.task('copyAssets', gulp.series(function(done) {
+  gulp.src(paths.images)
+    .pipe(gulp.dest(paths.dest + 'images/'));
+  gulp.src(paths.files)
+    .pipe(gulp.dest(paths.dest + 'files/'))
+  gulp.src(paths.favicon)
+    .pipe(gulp.dest(paths.dest))
+  done();
 }));
-
-gulp.task('copyImages', gulp.series(function(done) {
-  gulp.src(paths.copyImages)
-    .pipe(gulp.dest(paths.dest + '/images'));
-    done();
-}));
-
-gulp.task('copyFiles', gulp.series(function(done) {
-  gulp.src(paths.copyFiles)
-    .pipe(gulp.dest(paths.dest + '/files'));
-    done();
-}));   
 
 gulp.task('copyScripts', gulp.series(function(done) {
   gulp.src(paths.copyScripts, { allowEmpty: true })
@@ -163,11 +135,8 @@ gulp.task('serve', function() {
 });
 
 gulp.task('build', gulp.series(
-  'copyfonts', 
   'copyScripts', 
-  'copyImages', 
-  'copyFiles', 
-  'svgstore', 
+  'copyAssets', 
   'sass', 
   'twig', 
   'concat', 
