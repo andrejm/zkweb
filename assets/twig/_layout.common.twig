@@ -1,62 +1,46 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-{# {% include '_gtm_HEAD.twig' %} #}
+    <title>{{ block('title') }} | </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ block('title') }} | </title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Place favicon.ico in the root directory -->
 
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <!-- Place favicon.ico in the root directory -->
+    {% include '_social_markup.twig' %}
 
-{% include '_social_markup.twig' %}
+    <link rel="stylesheet" href="css/main.css?v=20191013">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600|Open+Sans&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header class="site-header js-site-header">
+      <div class="grid-container">
+        <div class="grid-x">
+          <button class="site-header__menutoggle js-menutoggle"></button>
+          <div class="cell small-12 medium-2 large-3"><h1 class="site-header__title">Cestou Zimy</h1></div>
+          <div class="cell medium-10 large-9 site-header__navigation">
+            <nav class="site-navigation">
+              <ul class="site-menu">
+                <li class="site-menu__item"><a href="#top" class="site-menu__href">Úvod</a></li>
+                <li class="site-menu__item"><a href="#okurze" class="site-menu__href">O kurze</a></li>
+                <li class="site-menu__item"><a href="#tim" class="site-menu__href">Tím</a></li>
+                <li class="site-menu__item"><a href="#prihlaska" class="site-menu__href">Prihlásenie</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
 
-        {# <link rel="stylesheet" href="css/normalize.css"> #}
-        <link rel="stylesheet" href="css/main.css?v=20191013">
-        {# <script src="js/vendor/modernizr-2.8.3.min.js"></script> #}
-        {# <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet"> #}
-        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600|Open+Sans&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-{# {% include '_gtm_BODY.twig' %} #}
+    {% block page %}{% endblock %}
 
-        <header class="site-header js-site-header">
-            <div class="grid-container">
-                <div class="grid-x">
-                    <button class="site-header__menutoggle js-menutoggle"></button>
-                    <div class="cell small-12 medium-2 large-3"><h1 class="site-header__title">Cestou Zimy</h1></div>
-                    <div class="cell medium-10 large-9 site-header__navigation">
-                        <nav class="site-navigation">
-                            <ul class="site-menu">
-                                <li class="site-menu__item"><a href="#top" class="site-menu__href">Úvod</a></li>
-                                <li class="site-menu__item"><a href="#okurze" class="site-menu__href">O kurze</a></li>
-                                <li class="site-menu__item"><a href="#tim" class="site-menu__href">Tím</a></li>
-                                <li class="site-menu__item"><a href="#prihlaska" class="site-menu__href">Prihlásenie</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        {% block page %}{% endblock %}
-
-        <script src="js/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-
-
-        <script>
-            //$(document).foundation();
-        </script>
-
-    </body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
 
