@@ -52,6 +52,9 @@ var paths = {
         copyImages: [
             'assets/images/**/*.{png,jpg,jpeg,svg}'
         ],
+        copyFiles: [
+            'files/**/*.*',
+        ],
         fonts: [
         'assets/fonts/*.{ttf,woff,woff2,eot,svg}'
         ],
@@ -175,6 +178,12 @@ gulp.task('copyImages', gulp.series(function(done) {
  done();
 }));
 
+gulp.task('copyFiles', gulp.series(function(done) {
+    gulp.src(paths.copyFiles)
+    .pipe(gulp.dest(paths.dest + '/files'));
+    done();
+   }));   
+
 gulp.task('copyScripts', gulp.series(function(done) {
  gulp.src(paths.copyScripts, { allowEmpty: true })
  .pipe(gulp.dest(paths.dest + '/js'));
@@ -200,6 +209,7 @@ gulp.task('build', gulp.series(
     'copyfonts', 
     'copyScripts', 
     'copyImages', 
+    'copyFiles', 
     'svgstore', 
     'sass', 
     'twig', 
