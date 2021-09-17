@@ -9,3 +9,4 @@ robots.txt
 /README.txt
 node_modules
 bower_components
+dist
