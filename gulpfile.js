@@ -95,7 +95,8 @@ gulp.task('sass', gulp.series(function(done) {
     }))
         .pipe(sass({
             includePaths: paths.scssPaths,
-            outputStyle: 'expanded'
+            outputStyle: 'expanded',
+            quietDeps: true,
         }))
         .pipe(prefix(
             "last 2 versions", "> 1%", "ie 8"
@@ -195,7 +196,7 @@ gulp.task('serve', function() {
     // gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
-gulp.task( 'default', gulp.series( 
+gulp.task('build', gulp.series(
     'copyfonts', 
     'copyScripts', 
     'copyImages', 
@@ -203,5 +204,9 @@ gulp.task( 'default', gulp.series(
     'sass', 
     'twig', 
     'concat', 
+));
+
+gulp.task( 'default', gulp.series( 
+    'build', 
     'serve' 
-    ));
+));
