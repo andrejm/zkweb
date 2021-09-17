@@ -116,7 +116,7 @@ gulp.task('copyAssets', gulp.series(function(done) {
 }));
 
 gulp.task('copyScripts', gulp.series(function(done) {
-  gulp.src(paths.copyScripts, { allowEmpty: true })
+  gulp.src(paths.copyScripts)
     .pipe(gulp.dest(paths.dest + '/js'));
     done();
 }));

@@ -21,6 +21,7 @@
     "gulp-uglify": "latest",
     "gulp-watch": "latest",
     "imagesloaded": "^4.1.4",
+    "jquery": "^3.6.0",
     "magnific-popup": "^1.1.0",
     "masonry-layout": "^4.2.2",
     "motion-ui": "latest",
