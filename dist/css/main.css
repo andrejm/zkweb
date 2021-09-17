@@ -7585,7 +7585,7 @@ p.no-margin {
   }
 }
 .intro__bg {
-  background: transparent no-repeat url("../../dist/images/hory_title_complete.png") center left;
+  background: transparent no-repeat url("../../images/hory_title_complete.png") center left;
   position: absolute;
   top: 0;
   right: 0px;
@@ -7701,25 +7701,25 @@ p.no-margin {
   }
 }
 .profile__imgpart--arny {
-  background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/arny.jpg") top;
+  background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/arny.jpg") top;
 }
 .profile__imgpart--fresh {
-  background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/fresh.jpg") top;
+  background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/fresh.jpg") top;
 }
 .profile__imgpart--kika {
-  background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/kika.jpg") top;
+  background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/kika.jpg") top;
 }
 .profile__imgpart--peto {
-  background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/peto.jpg") top;
+  background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/peto.jpg") top;
 }
 .profile__imgpart--riso {
-  background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/riso.jpg") top;
+  background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/riso.jpg") top;
 }
 .profile__imgpart--buchta {
-  background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/buchta.jpg") top;
+  background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/buchta.jpg") top;
 }
 .profile__imgpart--miro {
-  background: no-repeat url("../../dist/images/photoframe.png") top, no-repeat url("../../dist/images/miro.jpg") top;
+  background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/miro.jpg") top;
 }
 .profile__imgpart {
   -webkit-box-flex: 0;

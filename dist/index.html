@@ -1,21 +1,65 @@
-{% set year = '2020' %}
-{% set date = '8. február - 15. február 2020' %}
-{% set altdate = '' %}
-{% set deadline = '18.11. 2019' %}
-{% set formlink = 'https://docs.google.com/forms/d/e/1FAIpQLSdoOAVLcwkgdLJA7klytCQ7mgYqLZfvaOYDiam7Cr3-MxkCsQ/viewform' %}
-{% set contactperson = '' %}
-{% set contactmail = 'info.zimnykurz@plusko.net' %}
-{% set contactphone = '0907 063 840' %}
-{% set price = '140' %}
-{% set price2 = '160' %}
-{% set fb_event = '' %}
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-{% extends "_layout.common.twig" %}
 
-{% block title %}Cestou Zimy, zimný kurz Pluska{% endblock %}
 
-{% block page %}
+        <title>Cestou Zimy, zimný kurz Pluska | </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <!-- Place favicon.ico in the root directory -->
+
+
+		<meta property="og:title" content="Cestou Zimy, zimný kurz Pluska" />
+		<meta property="og:image" content="/images/fb_share.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:description" content="Osem dní. Vonku a iba s tým, čo si nesieš na chrbte, s tým, čo si nesieš v sebe. Ty a skupina skvelých ľudí. Život bez nánosov civilizácie." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://zimnykurz.sk" />
+		
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:url" content="https://zimnykurz.sk" />
+		<meta name="twitter:image" content="/images/fb_share.png" />
+		<meta name="twitter:title" content="Cestou Zimy, zimný kurz Pluska" />
+		<meta name="twitter:description" content="Osem dní. Vonku a iba s tým, čo si nesieš na chrbte, s tým, čo si nesieš v sebe. Ty a skupina skvelých ľudí. Život bez nánosov civilizácie." />
+        
+        <link rel="stylesheet" href="css/main.css?v=20191013">
+        
+        
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600|Open+Sans&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <header class="site-header js-site-header">
+            <div class="grid-container">
+                <div class="grid-x">
+                    <button class="site-header__menutoggle js-menutoggle"></button>
+                    <div class="cell small-12 medium-2 large-3"><h1 class="site-header__title">Cestou Zimy</h1></div>
+                    <div class="cell medium-10 large-9 site-header__navigation">
+                        <nav class="site-navigation">
+                            <ul class="site-menu">
+                                <li class="site-menu__item"><a href="#top" class="site-menu__href">Úvod</a></li>
+                                <li class="site-menu__item"><a href="#okurze" class="site-menu__href">O kurze</a></li>
+                                <li class="site-menu__item"><a href="#tim" class="site-menu__href">Tím</a></li>
+                                <li class="site-menu__item"><a href="#prihlaska" class="site-menu__href">Prihlásenie</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        
 	<section class="section intro">
 		<div class="intro__inner">
 			<div class="intro__bg"></div>
@@ -23,9 +67,8 @@
 				<h1 class="intro__title">Cestou Zimy</h1>
 				<h2 class="intro__subtitle">Zimný kurz od <a href="http://plusko.net/" target="_blank" title="Mládežnícka organizácia Plusko"><img src="/images/logo-plusko.png" alt="Logo Mládežníckej organizácie Plusko" class="intro__organizerlogo"></a></h2>
 				
-				<p class="intro__date">{{ date }} <br>Veľká Fatra</p>
-				{# <p class="intro__altdate">Záložný termín: {{ altdate }}*</p>
-				<p class="intro__altdatexplain">* využijeme iba v prípade <br>nevyhovujúceho počasia</p> #}
+				<p class="intro__date">8. február - 15. február 2020 <br>Veľká Fatra</p>
+				
 				<p>&nbsp;</p>
 				<p><a href="#okurze" class="button">Zisti viac</a></p>
 			</div>
@@ -49,7 +92,7 @@
 				<p>
 					Naučíme ťa, ako fungovať v zimných podmienkach, no nezostaneme len pri tom. Cestou Zimy je zážitkový kurz. V tichej zimnej krajine ti tak dáme priestor zamyslieť sa nad svojimi hodnotami.
 				</p>
-				{# Cestou Zimy je zážitková akcia mládežníckej organizácie Plusko. Naučíš sa zručnosti potrebné pre putovanie v zime a zimné táborenie - ako inak, na vlastnej koži. Naviac ti dáme možnosť ďaleko od civilizácie popremýšľať o tvojich životných hodnotách. Nebudeme totiž celý čas iba stavať iglú. Očakávaj aj bloky zamerané na to, čo je pre teba v živote dôležité. Skrátka ti nedáme pokoj! #}
+				
 			</div>
 		</div>
 	</section>
@@ -106,7 +149,7 @@
 		</div>
 	</section>
 
-{# </div> #}
+
 		<section class="section coursegallery">
 			<div class="coursegallery__gallery">
 				<div class="gallery">
@@ -134,7 +177,7 @@
 				</div>
 			</div>
 		</section>
-{# <div class="contentwrap"> #}
+
 	<section class="section need">
 		<div class="grid-x grid-padding-x">
 			<div class="cell small-12 medium-4 large-5">
@@ -166,7 +209,7 @@
 			</div>
 		</div>
 	</section>
-</div> {# /.contentwrap #}
+</div> 
 
 <hr>
 
@@ -209,7 +252,7 @@
 				
 			</div>
 			<div class="cell small-12 medium-2 large-2">
-				{# panak #}
+				
 			</div>
 			<div class="cell small-12 medium-5 large-5 grid-y">
 				<div class="cell profiles__profile profile">
@@ -251,28 +294,25 @@
 
 
 
-			{# <div class="profilecol">
-			</div>
-			<div class="profilecol">panak</div>
-			<div class="profilecol">dalsie bio</div> #}
+			
 		</div>
 	</section>
 
 	<section id="prihlaska" class="section apply">
 		<div class="grid-x grid-padding-x">
 			<div class="cell">
-				<h2 class="apply__title section__title">Rozhodnuté? Prihlás sa! Najneskôr do {{ deadline }}</h2>
+				<h2 class="apply__title section__title">Rozhodnuté? Prihlás sa! Najneskôr do 18.11. 2019</h2>
 			</div>
 		</div>
 		<div class="grid-x grid-padding-x">
 			<div class="cell small-12 medium-6">
 				<p>Finálna skupinka bude pozostávať z max 18 účastníkov starších ako 18 rokov.</p>
 				<p> 
-					<strong>Termín kurzu</strong> je {{ date }}.
+					<strong>Termín kurzu</strong> je 8. február - 15. február 2020.
 				</p>
 				<div class="pricebox">
 					<p class="no-margin">Poplatok za kurz je</p>
-					<p class="pricebox__price">{{ price }} &euro; ({{ price2 }} &euro;)</p>
+					<p class="pricebox__price">140 &euro; (160 &euro;)</p>
 					<p>
 						Ak sa prihlásiš do 31.10.2019, cena za kurz je 140 € <br>
 						Ak sa prihlásiš od 1.11. do 18.11.2019, cena za kurz je 160 €
@@ -284,30 +324,34 @@
 			<div class="cell small-12 medium-6">
 				<p>Ak sa chceš prihlásiť:</p>
 				<ol>
-					<li>Do <strong>{{ deadline }}</strong> vyplň prihlášku s informáciami o sebe (link nižšie)</li>
+					<li>Do <strong>18.11. 2019</strong> vyplň prihlášku s informáciami o sebe (link nižšie)</li>
 					<li>Zaplať zálohu (inštrukcie v prihláške)</li>
 					<li>Počkaj si na potvrdenie účasti - v prípade, že bude po ukončení prihlasovania viac prihlásených záujemcov ako miest na kurze, vyberieme finálnu skupinku a dáme ti vedieť</li>
 				</ol>
-				<a href="{{ formlink }}" title="Prihláška (nové okno)" class="button large expanded apply__cta" target="_blank">Vyplniť prihlášku</a>
-				<p>Ak ti napadne akákoľvek otázka, ozvi sa na <strong>{{ contactmail }}</strong> alebo {{ contactphone }}.</p>
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSdoOAVLcwkgdLJA7klytCQ7mgYqLZfvaOYDiam7Cr3-MxkCsQ/viewform" title="Prihláška (nové okno)" class="button large expanded apply__cta" target="_blank">Vyplniť prihlášku</a>
+				<p>Ak ti napadne akákoľvek otázka, ozvi sa na <strong>info.zimnykurz@plusko.net</strong> alebo 0907 063 840.</p>
 
 				
 			</div>
 		</div>
 	</section>
 
-	{# <section class="section faq">
-		<div class="grid-xy">
-			<div class="cell">
-				<h3>Tak si to zhrnme</h3>
-				<p>faqs</p>
-			</div>
-		</div>
-	</section> #}
+	
 </div>
 
 <footer>
 	
 </footer>
 
-{% endblock %}
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+
+
+        <script>
+            //$(document).foundation();
+        </script>
+
+    </body>
+</html>
+

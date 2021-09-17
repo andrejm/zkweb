@@ -50,7 +50,7 @@ var paths = {
         ],
         images: ['assets/svg/*.svg'],
         copyImages: [
-            'assets/images/*.{png,jpg,jpeg,svg}'
+            'assets/images/**/*.{png,jpg,jpeg,svg}'
         ],
         fonts: [
         'assets/fonts/*.{ttf,woff,woff2,eot,svg}'
@@ -113,7 +113,7 @@ gulp.task('twig', function () {
     'use strict';
     return gulp.src(paths.twigTemplates)
     .pipe(twig())
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest('dist/'))
     .pipe(browserSync.stream());
 });
 
@@ -185,8 +185,8 @@ gulp.task('serve', function() {
 
     browserSync.init({
         server: {
-            baseDir: ".",
-            index: "/index.html"
+            baseDir: "dist",
+            index: "index.html"
         }
     });
 
