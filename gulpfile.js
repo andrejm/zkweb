@@ -18,7 +18,6 @@ var del = require('del');
 var paths = {
   scripts: [
     'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
-    'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
     'node_modules/imagesloaded/imagesloaded.pkgd.min.js',
     'assets/js/components/*.js',
     'assets/js/main.js'
