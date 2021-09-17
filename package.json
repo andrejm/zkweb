@@ -25,7 +25,8 @@
     "masonry-layout": "^4.2.2",
     "motion-ui": "latest",
     "path": "^0.12.7",
-    "sass": "^1.41.0"
+    "sass": "^1.41.0",
+    "twig-markdown": "^0.2.1"
   },
   "dependencies": {
     "browser-sync": "^2.5.2"

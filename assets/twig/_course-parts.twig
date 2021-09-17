@@ -1,0 +1,47 @@
+{% set items = [
+  {
+    name: 'Prípravná fáza',
+    content: '
+      Hoci samotný kurz začne až vo februári, **jeho súčasťou je aj cca dvojmesačná prípravná fáza**, ktorá začne už **v novembri**. Dáme ti niekoľko individuálnych aj skupinových výziev, ktoré ťa lepšie pripravia na to, čo príde na kurze. Bude len na tebe ako sa ich zhostíš.
+
+      **Komunikovať budeme cez e-mail** (asi raz týždenne okrem vianočných sviatkov - budeme potrebovať, aby si mal/a v tomto čase prístup k e-mailom).
+    ',
+  },
+  {
+    name: 'Putovná časť',
+    content: '
+      Vydáš sa s batohom na chrbte v skupine podobne naladených ľudí na **putovanie zimnou krajinou**. Spávať budeš v stane pod zimnou hviezdnou oblohou, naučíš sa pohybovať na snežniciach a fungovať v mínusových teplotách. 
+
+      Ale neboj sa - nie je to kurz prežitia. Na trojdňové putovanie plynule nadviaže pobytová časť.
+    ',
+  },
+  {
+    name: 'Pobytová časť',
+    content: '
+      Počas dňa sa už **nebudeme presúvať, v noci spíme v stanoch na jednom mieste**. K dispozícii bude poľná kuchyňa (zabezpečujeme teplú varenú stravu počas celého dňa) a prístrešok. 
+
+      Tieto dni si čo najviac denného svetla vychutnáme **aktivitami vonku** pri teplotách, ktoré majú pred číslom znak mínus;) Dostaneš možnosť zamyslieť sa nad svojimi hodnotami a môže sa stať, že tvoj život sa potom zmení.
+    ',
+  },
+] %}
+
+<section class="section how">
+  <div class="grid-x grid-padding-x">
+    <div class="cell">
+      <h3 class="section__title">Ako to bude prebiehať?</h3>
+    </div>
+  </div>
+
+  <div class="courseparts">
+    {% for item in items %}
+      <div class="courseparts__part coursepart">
+        <h4 class="coursepart__title">{{ item.name }}</h4>
+        <div class="coursepart__textpart">
+          {% markdown %}
+            {{ item.content }}
+          {% endmarkdown %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

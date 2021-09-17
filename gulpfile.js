@@ -16,6 +16,7 @@ var svgmin = require('gulp-svgmin');
 var path = require('path');
 var cssGlobbing = require('gulp-css-globbing');
 var babel = require('gulp-babel');
+var twigMarkdown = require('twig-markdown');
 
 // Paths
 var paths = {
@@ -115,7 +116,7 @@ gulp.task('sass', gulp.series(function(done) {
 gulp.task('twig', function () {
     'use strict';
     return gulp.src(paths.twigTemplates)
-    .pipe(twig())
+    .pipe(twig({data: {}, extend: twigMarkdown}))
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.stream());
 });
