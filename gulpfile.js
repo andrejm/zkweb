@@ -12,6 +12,7 @@ var twig = require('gulp-twig');
 var cssGlobbing = require('gulp-css-globbing');
 var babel = require('gulp-babel');
 var twigMarkdown = require('twig-markdown');
+var del = require('del');
 
 // Paths
 var paths = {
@@ -38,6 +39,10 @@ var paths = {
   twigWatch: ['assets/twig/*.twig'],
   dest : 'dist/'
 };
+
+gulp.task('clean', function(){
+  return del('dist/**', {force:true});
+});
 
 // Compile Sass
 gulp.task('sass', gulp.series(function(done) {
@@ -130,6 +135,7 @@ gulp.task('serve', function() {
 });
 
 gulp.task('build', gulp.series(
+  'clean',
   'copyScripts', 
   'copyAssets', 
   'sass', 
