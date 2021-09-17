@@ -51,7 +51,7 @@ var paths = {
         ],
         images: ['assets/svg/*.svg'],
         copyImages: [
-            'assets/images/**/*.{png,jpg,jpeg,svg}'
+            'assets/images/**/*.{png,jpg,jpeg,svg,gif}'
         ],
         copyFiles: [
             'files/**/*.*',
