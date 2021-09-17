@@ -29,5 +29,10 @@
   },
   "dependencies": {
     "browser-sync": "^2.5.2"
+  },
+  "scripts": {
+    "build": "npx gulp build",
+    "start": "npx gulp",
+    "deploy-preview": "npx gulp build && echo 'User-agent: *\nDisallow: /' > dist/robots.txt"
   }
 }
