@@ -32,7 +32,7 @@ jobs:
       - name: Deploy to Server
         uses: Creepios/sftp-action@v1.0.2
         with:
-          host: 'zimnykurz.sk'
+          host: 'sftp://zimnykurz.sk'
           port: 22
           username: 'web.zimnykurz.sk'
           password: ${{ secrets.SFTP_PASSWORD }}
