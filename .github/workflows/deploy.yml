@@ -40,5 +40,5 @@ jobs:
           remote_folder: web
           local_folder: dist
           cleanup: false # optional, remove existing files inside FTP remote folder
-          pasive: true # optional
+          pasive: false # optional
     
