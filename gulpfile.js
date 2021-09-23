@@ -28,6 +28,7 @@ var paths = {
   images: 'assets/images/**/*.{png,jpg,jpeg,svg,gif}',
   files: 'assets/files/**/*',
   favicon: 'assets/favicon.ico',
+  htaccess: 'assets/.htaccess',
   scss: ['assets/scss/main.scss'],
   scssWatch: ['assets/scss/**/*.scss'],
   scssPaths: [
@@ -110,6 +111,8 @@ gulp.task('copyAssets', gulp.series(function(done) {
   gulp.src(paths.files)
     .pipe(gulp.dest(paths.dest + 'files/'))
   gulp.src(paths.favicon)
+    .pipe(gulp.dest(paths.dest))
+  gulp.src(paths.htaccess)
     .pipe(gulp.dest(paths.dest))
   done();
 }));
