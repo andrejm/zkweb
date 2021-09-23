@@ -30,15 +30,13 @@ jobs:
       - name: Build site
         run: npm run build
       - name: Deploy to Server
-        uses: sand4rt/ftp-deployer@v1.3
+        uses: wangyucode/sftp-upload-action@latest
         with:
-          sftp: true # optional
           host: zimnykurz.sk
           port: 22
           username: web.zimnykurz.sk
-          password: ${{ secrets.SFTP_PASSWORD }} # FTP password
-          remote_folder: web
-          local_folder: dist
-          cleanup: false # optional, remove existing files inside FTP remote folder
-          pasive: false # optional
+          password: ${{ secrets.SFTP_PASSWORD }}
+          localDir: 'dist'
+          remoteDir: '/web'
+          dryRun: true
     
