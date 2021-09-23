@@ -51,6 +51,10 @@
 		background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/miro.jpg") top;
 	}
 
+	&__imgpart--lada {
+		background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/lada.jpg") top;
+	}
+
 	&__imgpart {
 		flex: 0 0 100px;
 		background-size: contain;
