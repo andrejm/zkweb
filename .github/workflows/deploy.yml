@@ -30,7 +30,7 @@ jobs:
       - name: Build site
         run: npm run build
       - name: Deploy to Server
-        uses: wangyucode/sftp-upload-action@1.1
+        uses: wangyucode/sftp-upload-action@v1.1
         with:
           host: zimnykurz.sk
           port: 22
