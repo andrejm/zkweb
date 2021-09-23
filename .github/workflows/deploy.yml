@@ -35,7 +35,7 @@ jobs:
           host: 'zimnykurz.sk'
           port: 22
           username: 'web.zimnykurz.sk'
-          password: ${{ SFTP_PASSWORD }}
+          password: ${{ secrets.SFTP_PASSWORD }}
           localPath: './dist/'
           remotePath: './web/'
 
