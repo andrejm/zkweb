@@ -14,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  build-and-deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -30,13 +30,15 @@ jobs:
       - name: Build site
         run: npm run build
       - name: Deploy to Server
-        uses: Creepios/sftp-action@v1.0.2
+        uses: sand4rt/ftp-deployer@v1.3
         with:
-          host: 'sftp://zimnykurz.sk'
+          sftp: true # optional
+          host: zimnykurz.sk
           port: 22
-          username: 'web.zimnykurz.sk'
-          password: ${{ secrets.SFTP_PASSWORD }}
-          localPath: './dist/'
-          remotePath: './web/'
-
+          username: web.zimnykurz.sk
+          password: ${{ secrets.SFTP_PASSWORD }} # FTP password
+          remote_folder: web
+          local_folder: dist
+          cleanup: false # optional, remove existing files inside FTP remote folder
+          pasive: true # optional
     
