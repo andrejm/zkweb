@@ -1,37 +1,37 @@
 {% set members = [
   {
     name: 'Fresh',
-    id: 'fresh',
+    image: 'fresh.jpg',
     bio: 'Fresh je so zimou skutočne kamarát. Slabšiu kondičku programátora nahrádza pevnou vôľou, ktorá ho potlačí, keď si dá telo pauzu. Pred ôsmimi rokmi zistil, že od októbra do februára je na jazerách menej ľudí, preto vymenil slnečník a opaľovací krém za sekeru a termosku s čajom :)',
   },
   {
     name: 'Kika',
-    id: 'kika',
+    image: 'kika.jpg',
     bio: 'Kika pracuje vo filmovom priemysle. Keď nepracuje, tak si naplno vychutnáva chvíle voľna v prírode v ktoromkoľvek ročnom období. Takto sa dostala na zimný kurz, ktorý si naplno užila, a so zimou je kamarátka. Veľmi sa teší, že môže byť súčasťou tejto akcie.',
   },
   {
     name: 'Rišo',
-    id: 'riso',
+    image: 'riso.jpg',
     bio: 'Rišo je decembrové dieťa s pozitívnym vzťahom k zime. Dlhoročný Plusácky inštruktor, účastník ZIKu 2009 a ZDrSEMu 2012 si overil na vlastnej koži, že to, čo trvá v rámci zážitkovej pedagogiky v lete dva týždne, dosiahnete s účastníkmi v zime za kratší čas.',
   },
   {
     name: 'Arny',
-    id: 'arny',
+    image: 'arny.jpg',
     bio: 'Arny je vášnivý ITčkar ktorý si užíva počítačovú (ne)gramotnosť ľudí zo strany supportu. Napriek teplomilnej povahe sa pred pár rokmi prekonal a objavil čaro zimy. Pripojil sa do tímu Zimného kurzu, kde okrem svalov prináša aj znalosti z kurzu prvej pomoci ZDrSEM.',
   },
   {
     name: 'Buchta',
-    id: 'buchta',
+    image: 'buchta.jpg',
     bio: 'Buchta pracuje ako účtovníčka. Miluje teplo a so zimou si zatiaľ potykala len z pozície rekreačného lyžiara. Keďže má rada výzvy, odhodlala sa okúsiť nástrahy zimy ako pomocníček na pobytovej časti.',
   },
   {
     name: 'Miro',
-    id: 'miro',
+    image: 'miro.jpg',
     bio: 'Miro miluje zimu nielen preto, že je z Oravy, ale hlavne preto, že ho vtedy netrápi alergia. Aj keď horúcu sprchu vymení za studenú len tažko, na bicykli jazdí aj v tuhých mrazoch. Zistil, že Zimný kurz je prudko navýkový a veľmi rád sa pripojil do organizačného tímu.',
   },
   {
     name: 'Lada',
-    id: 'lada',
+    image: 'lada.jpg',
     bio: 'Lada se zimou dlouho nebyla vůbec kámoška a kromě trochy lyžování a Vánoc se vždycky těšila spíš na léto. Až Zimní kurz s Pluskem jí ukázal, že se dá v zimní krajině fungovat, a že je to nezaměnitelná nádhera. Od té doby má o jedno roční období navíc, kdy může městský život studenta dějin umění kombinovat s volným časem v přírodě, což jí dělá velkou radost.',
   },
 ] %}
@@ -49,7 +49,9 @@
     <div class="cell small-12 medium-5 large-5 grid-y">
     {% for i, member in members %}
           <div class="cell profiles__profile profile">
-            <div class="profile__imgpart profile__imgpart--{{ member.id }}"></div>
+            <div class="profile__imgpart">
+              <img src="/images/{{ member.image }}" width="100" height="100" class="profile__image" />
+            </div>
             <div class="profile__textpart">
               <h4 class="profile__name">{{ member.name }}</h4>
               <p class="profile__bio">{{ member.bio }}</p>

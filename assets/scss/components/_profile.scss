@@ -5,59 +5,24 @@
 
 	@include breakpoint( medium ) {
 		flex-flow: row nowrap;
-	}
-
-	// &__imgpart--kubo {
-	// 	background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/kubo.jpg") top;
-	// }
-
-	// &__imgpart--lula {
-	// 	background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/lula.jpg") top;
-	// }
-
-	&__imgpart--arny {
-		background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/arny.jpg") top;
-	}
-
-	// &__imgpart--zuzka {
-	// 	background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/zuzka.jpg") top;
-	// }
-
-	&__imgpart--fresh {
-		background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/fresh.jpg") top;
-	}
-
-	&__imgpart--kika {
-		background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/kika.jpg") top;
-	}
-
-	// &__imgpart--ada {
-	// 	background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/ada.jpg") top;
-	// }
-
-	&__imgpart--peto {
-		background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/peto.jpg") top;
-	}
-
-	&__imgpart--riso {
-		background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/riso.jpg") top;
-	}
-
-	&__imgpart--buchta {
-		background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/buchta.jpg") top;
-	}
-
-	&__imgpart--miro {
-		background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/miro.jpg") top;
-	}
-
-	&__imgpart--lada {
-		background: no-repeat url("../../images/photoframe.png") top, no-repeat url("../../images/lada.jpg") top;
+		align-items: flex-start;
 	}
 
 	&__imgpart {
+		position: relative;
 		flex: 0 0 100px;
-		background-size: contain;
+		text-align: center;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: no-repeat url("../../images/photoframe.png") top;
+			background-size: contain;
+		}
 	}
 
 	&__textpart {
