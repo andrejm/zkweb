@@ -30,7 +30,7 @@ jobs:
       - name: Build site
         run: npm run build
       - name: Deploy to Server
-        uses: Creepios/sftp-action@v1
+        uses: Creepios/sftp-action@v1.0.2
         with:
           host: 'zimnykurz.sk'
           port: 22
