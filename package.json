@@ -27,6 +27,6 @@
     "path": "^0.12.7"
   },
   "dependencies": {
-    "browser-sync": "^2.5.2"
+    "browser-sync": "^2.27.10"
   }
 }
