@@ -8,7 +8,7 @@
     "foundation-sites": "6.4.*",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
-    "gulp-babel": "^6.1.2",
+    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "latest",
     "gulp-concat": "latest",
     "gulp-css-globbing": "^0.2.2",
