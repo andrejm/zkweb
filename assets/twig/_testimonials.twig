@@ -1,0 +1,21 @@
+{% set items = [
+  "Zistil som, že sa dá pomerne komfortne existovať aj v priamom dotyku so Zimou. Len treba poznať (<span class='text-strike'>zopár</span> … asi je ich viac) správnych ťahov - po ich použití Zima odkryje svoju krásnu tvár.",
+  "Pre mňa tento kurz bol hlavne o tom, že aha ako málo ma robí šťastným a reflektoval to na svoj bežný život, čo chcem zmeniť a prečo.",
+  "Zimný Zážitok s veľkým Z :-)",
+] %}
+
+<section class="section">
+  <div class="grid-x grid-padding-x quotes">
+    {% for item in items %}
+      <div class="cell small-12 medium-6 large-4">
+        <p class="quotes__quote">
+          "{{ item }}"
+        </p>
+      </div>
+    {% endfor %}
+
+    <div class="cell">
+      <p>— účastníci kurzu</p>
+    </div>
+  <div>
+</section>
