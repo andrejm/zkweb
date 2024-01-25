@@ -1,0 +1,33 @@
+{% set images = [
+  'cestouzimy-17.jpg',
+  'cestouzimy-203.jpg',
+  'cestou_zimy_2019_1.jpg',
+  'cestouzimy-564.jpg',
+  'zimnykurz-4.jpg',
+  'cestouzimy-248.jpg',
+  'cestou_zimy_2019_3.jpg',
+  'cestouzimy-393.jpg',
+  'cestouzimy-502.jpg',
+  'cestou_zimy_2019_5.jpg',
+  'cestou_zimy_2019_4.jpg',
+  'zimnykurz-10.jpg',
+  'zimnykurz-11.jpg',
+  'zimnykurz-16.jpg',
+  'zimnykurz-18.jpg',
+  'zimnykurz-6.jpg',
+  'zimnykurz-8.jpg',
+  'zk_put-6204.jpg',
+  'zk_put-6372.jpg',
+  'cestou_zimy_2019_2.jpg',
+] %}
+
+<section class="section coursegallery">
+  <div class="coursegallery__gallery">
+    <div class="gallery">
+      <div class="grid-sizer"></div>
+      {% for image in images %}
+        <a href="/images/gallery/{{image}}" class="gallery__item"><img src="/images/gallery/thumbs/{{image}}" alt=""></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

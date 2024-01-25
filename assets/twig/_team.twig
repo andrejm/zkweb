@@ -1,0 +1,81 @@
+{% set members = [
+  {
+    name: 'Fresh',
+    image: 'fresh.jpg',
+    bio: 'Fresh je so zimou skutočne kamarát. Slabšiu kondičku programátora nahrádza pevnou vôľou, ktorá ho potlačí, keď si dá telo pauzu. Pred ôsmimi rokmi zistil, že od októbra do februára je na jazerách menej ľudí, preto vymenil slnečník a opaľovací krém za sekeru a termosku s čajom :)',
+  },
+  {
+    name: 'Kika',
+    image: 'kika.jpg',
+    bio: 'Kika pracuje vo filmovom priemysle. Keď nepracuje, tak si naplno vychutnáva chvíle voľna v prírode v ktoromkoľvek ročnom období. Takto sa dostala na zimný kurz, ktorý si naplno užila, a so zimou je kamarátka. Veľmi sa teší, že môže byť súčasťou tejto akcie.',
+  },
+ {
+    name: 'Standa',
+    image: 'standa.jpg',
+    bio: 'Standa je v našem teamu nováček. Pravidelně se objevuje na horách hlavně v doprovodu nějaké skupinky lidí, neboť jedním z jeho zaměstnání je průvodcovská činnost. Rád se o lidi stará, učí je, jak se pohybovat v různých ročních obdobích v různých terénech. A rád kope za svou domovskou organizaci - Skaut :)',
+  },
+  {
+    name: 'Buchta',
+    image: 'buchta.jpg',
+    bio: 'Buchta pracuje ako účtovníčka. Miluje teplo a so zimou si zatiaľ potykala len z pozície rekreačného lyžiara. Keďže má rada výzvy, odhodlala sa okúsiť nástrahy zimy ako pomocníček na víkendovej časti.',
+  },
+  {
+    name: 'Miro',
+    image: 'miro.jpg',
+    bio: 'Miro miluje zimu nielen preto, že je z Oravy, ale hlavne preto, že ho vtedy netrápi alergia. Aj keď horúcu sprchu vymení za studenú len tažko, na bicykli jazdí aj v tuhých mrazoch. Zistil, že Zimný kurz je prudko navýkový a veľmi rád sa pripojil do organizačného tímu.',
+  },
+  {
+    name: 'Lada',
+    image: 'lada.jpg',
+    bio: 'Lada se zimou dlouho nebyla vůbec kámoška a kromě trochy lyžování a Vánoc se vždycky těšila spíš na léto. Až Zimní kurz s Pluskem jí ukázal, že se dá v zimní krajině fungovat, a že je to nezaměnitelná nádhera. Od té doby má o jedno roční období navíc, kdy může městský život studenta kombinovat s volným časem v přírodě, což jí dělá velkou radost.',
+  },
+  {
+    name: 'Arny',
+    image: 'arny.jpg',
+    bio: 'Arny je vášnivý ITčkar ktorý si užíva počítačovú (ne)gramotnosť ľudí zo strany supportu. Napriek teplomilnej povahe sa pred pár rokmi prekonal a objavil čaro zimy. Pripojil sa do tímu Zimného kurzu, kde okrem svalov prináša aj znalosti z kurzu prvej pomoci ZDrSEM.',
+  },
+  {
+    name: 'Terezka',
+    image: 'terezka.jpg',
+    bio: 'Terezka pracuje v oblasti environmentálneho poradenstva. Zimu mala rada vždy, no až po zimnom kurze objavila, že Zima v sebe skrýva oveľa viac - po duševnej aj fyzickej stránke. V poslednej dobe máva viac skrehnuté prsty, no so svojím charakterom "hužvy" to neberie ako prekážku pri strávení času v pohybe, v prírode a s ľuďmi.',
+  },
+] %}
+
+  {#
+    name: 'Rišo',
+    image: 'riso.jpg',
+    bio: 'Rišo je decembrové dieťa s pozitívnym vzťahom k zime. Dlhoročný Plusácky inštruktor, účastník ZIKu 2009 a ZDrSEMu 2012 si overil na vlastnej koži, že to, čo trvá v rámci zážitkovej pedagogiky v lete dva týždne, dosiahnete s účastníkmi v zime za kratší čas.',
+  #}
+  
+<section id="tim" class="section team">
+  <div class="grid-x grid-padding-x">
+    <div class="cell small-12">
+      <p class="section__intro">
+        Na kurze ťa bude sprevádzať tím skúsených inštruktorov zážitkovej pedagogiky. Všetci sme dobrovoľníci zážitkovej organizácie Plusko a niektorí sme v tíme od počiatkov kurzu v roku 2013.
+      </p>
+    </div>
+  </div>
+
+  <div class="profiles grid-x">
+    <div class="cell small-12 medium-5 large-5 grid-y">
+    {% for i, member in members %}
+          <div class="cell profiles__profile profile">
+            <div class="profile__imgpart">
+              <img src="/images/{{ member.image }}" width="100" height="100" class="profile__image" />
+            </div>
+            <div class="profile__textpart">
+              <h4 class="profile__name">{{ member.name }}</h4>
+              <p class="profile__bio">{{ member.bio }}</p>
+            </div>
+          </div>
+      {% if i == 2 %}
+        </div>
+        <div class="cell small-12 medium-2 large-2">
+          {# panak #}
+        </div>
+        <div class="cell small-12 medium-5 large-5 grid-y">
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</section>

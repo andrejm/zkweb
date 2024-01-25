@@ -5,28 +5,32 @@
   "version": "0.0.1",
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
-    "foundation-sites": "6.4.*",
+    "del": "^6.0.0",
+    "foundation-sites": "^6.7.2",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-babel": "^6.1.2",
-    "gulp-clean-css": "latest",
     "gulp-concat": "latest",
     "gulp-css-globbing": "^0.2.2",
     "gulp-plumber": "latest",
     "gulp-sass": "latest",
-    "gulp-sourcemaps": "latest",
     "gulp-svgmin": "^1.2.2",
     "gulp-svgstore": "^6.0.0",
     "gulp-twig": "^1.1.1",
     "gulp-uglify": "latest",
     "gulp-watch": "latest",
     "imagesloaded": "^4.1.4",
+    "jquery": "^3.6.0",
     "magnific-popup": "^1.1.0",
-    "masonry-layout": "^4.2.2",
-    "motion-ui": "latest",
-    "path": "^0.12.7"
+    "sass": "^1.41.0",
+    "twig-markdown": "^0.2.1"
   },
   "dependencies": {
     "browser-sync": "^2.5.2"
+  },
+  "scripts": {
+    "build": "npx gulp build",
+    "start": "npx gulp",
+    "deploy-preview": "npx gulp build && echo 'User-agent: *\nDisallow: /' > dist/robots.txt"
   }
 }
